@@ -1,0 +1,217 @@
+/* Reset and base styling */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Header and footer with consistent smooth gradient */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #006400, #ff9900);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #006400, #ff9900);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+/* Social icons positioned back to the center */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.social-icons a {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons img {
+    width: 24px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Restore and improve the 'Story' button */
+.story-link {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff7300, #ffa500);
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.story-link:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ffa500, #ff7300);
+    color: black;
+}
+
+/* Keyframes for bold fire effect */
+@keyframes boldFireEffect {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 1), 0 0 20px rgba(255, 140, 0, 1), 0 0 30px rgba(255, 223, 0, 1);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 69, 0, 1), 0 0 40px rgba(255, 165, 0, 1);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 1), 0 0 20px rgba(255, 140, 0, 1), 0 0 30px rgba(255, 223, 0, 1);
+    }
+}
+
+/* "Sloth vs Giraffe" improvements with animation */
+.fancy-logo span {
+    display: inline-block;
+    font-size: 4.5rem;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: boldFireEffect 2s infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.fancy-logo .sloth {
+    background: linear-gradient(to right, #32cd32, #006400);
+}
+
+.fancy-logo .vs {
+    background: linear-gradient(to right, #ff4500, #ff7300);
+}
+
+.fancy-logo .giraffe {
+    background: linear-gradient(to right, #ffa500, #ffcc00);
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.hero-left {
+    flex: 1;
+    background: url('tree.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-left img {
+    transform: scaleX(-1);
+    max-width: 60%;
+    transition: transform 0.3s ease;
+}
+
+.hero-left img:hover {
+    transform: scaleX(-1) scale(1.1);
+}
+
+.hero-right {
+    flex: 1;
+    background: url('sand-dune.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right img {
+    max-width: 60%;
+    transition: transform 0.3s ease;
+}
+
+.hero-right img:hover {
+    transform: scale(1.1);
+}
+
+/* Storyline Section */
+.storyline {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #006400, #228b22);
+    color: white;
+    margin-bottom: 0;
+}
+
+.storyline h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.storyline p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Fancy buttons and hover states */
+.fancy-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #ff7300, #ffa500);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.fancy-button:hover {
+    background: linear-gradient(to right, #ffa500, #ff7300);
+    transform: scale(1.1);
+    color: black;
+}
+
+/* Animations for scroll effect */
+@keyframes smoothScroll {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional media query for responsiveness */
+@media (min-width: 768px) {
+    .fancy-logo span {
+        font-size: 5rem;
+    }
+
+    .storyline p {
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+}
